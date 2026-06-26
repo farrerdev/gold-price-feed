@@ -2,7 +2,7 @@ name: Update gold prices
 
 on:
   schedule:
-    - cron: "7 * * * *"
+    - cron: "*/15 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -24,4 +24,3 @@ jobs:
           git add data
           git diff --cached --quiet || git commit -m "Update gold prices"
           git push
-
